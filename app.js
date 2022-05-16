@@ -2,23 +2,34 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
-
 const app = express();
 
+app.set('view engine', 'ejs');
+app.use(bodyParser.urlencoded({extended: true}));
+const port = process.env.PORT || 3000;
+app.use(express.static("public"));
 
-app.get("/", (req, res) => {
-    res.send("Hello");
+var connectLiveReload = require("connect-livereload");
+var livereload = require('livereload');
+var livereloadServer = livereload.createServer({extraExts: ['ejs']});
+livereloadServer.watch([__dirname + "/public",__dirname + "/views"]);
+
+livereloadServer.server.once("connection", () => {
+    setTimeout(() => {
+        livereloadServer.refresh("/");
+    }, 100);
+  });
+
+app.use(connectLiveReload())
+
+
+app.get('/', (req, res) => {
+    res.render("index");
 });
 
-app.listen(3000, (req, res) => {
+app.listen(port, (req, res) => {
     console.log("Listening on port 3000!");
 });
-
-
-// DART-SASS PACKAGE
-const sass = require('sass');
-
-// const result = sass.compile();
 
 
 // MongoDB DATABASE
