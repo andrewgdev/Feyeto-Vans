@@ -13,7 +13,7 @@ li, a {
 }
 
 header {
-  height: 45px;
+  height: 50px;
   width: 100%;
   background-color: #2e2e2e;
   display: flex;
@@ -128,30 +128,127 @@ header .header__nav .nav__ul .nav__li a:hover {
 }
 
 main {
-  height: 200px;
+  height: auto;
   width: 100%;
   position: relative;
   z-index: -1;
 }
 main .hero {
-  height: inherit;
+  height: 150px;
+  width: 100vw;
+}
+main .hero .clip-path_background {
+  height: 150px;
   width: 100%;
-  padding-top: 50px 0;
   background-color: #2e2e2e;
-  clip-path: polygon(0 0, 100% 0, 100% 24%, 0% 100%);
+  position: absolute;
+  clip-path: polygon(0 0, 100% 0, 100% 40%, 0 85%);
 }
 main .hero .hero__div_image-container {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  height: inherit;
-  max-width: 700px;
-  text-align: center;
-  margin: 0 20px;
-  max-width: 700px;
+  height: 150px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
 }
 main .hero .hero__div_image-container figure {
+  height: fit-content;
+  width: 190px;
+}
+main .hero .hero__div_image-container figure img {
+  margin: 50px auto 0;
+}
+main .popular-vans__section {
   height: auto;
-  width: auto;
+  width: 100%;
+}
+main .popular-vans__section .popular-vans__h2 {
+  margin: 50px auto 0;
+  text-align: center;
+  max-width: 200px;
+}
+main .popular-vans__section .popular-mercedes__container, main .popular-vans__section .popular-ford__container, main .popular-vans__section .popular-ram__container {
+  height: auto;
+  max-width: 200px;
+  margin: 45px auto 0;
+  background-color: #2e2e2e;
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+main .popular-vans__section .popular-mercedes__container figure, main .popular-vans__section .popular-ford__container figure, main .popular-vans__section .popular-ram__container figure {
+  height: auto;
+  width: 100%;
+}
+main .popular-vans__section .popular-mercedes__container figure img, main .popular-vans__section .popular-ford__container figure img, main .popular-vans__section .popular-ram__container figure img {
+  height: 100%;
+  width: 100%;
+}
+main .popular-vans__section .popular-mercedes__container .popular__h3, main .popular-vans__section .popular-ford__container .popular__h3, main .popular-vans__section .popular-ram__container .popular__h3, main .popular-vans__section .popular-mercedes__container .popular__p, main .popular-vans__section .popular-ford__container .popular__p, main .popular-vans__section .popular-ram__container .popular__p {
+  color: #fff;
+  margin: 10px;
+}
+main .popular-vans__section .popular-mercedes__container .popular__p, main .popular-vans__section .popular-ford__container .popular__p, main .popular-vans__section .popular-ram__container .popular__p {
+  font-weight: 300;
+}
+main .popular-vans__section .popular-mercedes__container .popular__button, main .popular-vans__section .popular-ford__container .popular__button, main .popular-vans__section .popular-ram__container .popular__button {
+  margin: 15px;
+  height: 30px;
+  width: 76px;
+  border-radius: 5px;
+  background-color: #72009A;
+  color: #fff;
+  letter-spacing: 1px;
+  border: none;
+}
+main .popular-vans__section .popular-ford__container {
+  margin-bottom: 45px;
+}
+
+footer {
+  height: 250px;
+  width: 100%;
+  background-color: #2e2e2e;
+}
+
+@media screen and (max-width: 400px) {
+  footer {
+    display: none;
+  }
+}
+@media screen and (min-width: 350px) {
+  header .header__h1_title {
+    font-size: 1.25em;
+  }
+
+  main .hero {
+    height: 200px;
+  }
+  main .hero .clip-path_background {
+    height: inherit;
+    clip-path: polygon(0 0, 100% 0, 100% 30%, 0 75%);
+  }
+  main .hero .hero__div_image-container {
+    height: inherit;
+  }
+  main .hero .hero__div_image-container figure {
+    width: 235px;
+  }
+  main .popular-vans__section {
+    height: auto;
+    width: 100%;
+  }
+  main .popular-vans__section .popular-vans__h2 {
+    margin: 50px auto 0;
+    text-align: center;
+    max-width: 200px;
+  }
+  main .popular-vans__section .popular-mercedes__container, main .popular-vans__section .popular-ram__container, main .popular-vans__section .popular-ford__container {
+    max-width: 250px;
+  }
+
+  footer {
+    display: block;
+  }
 }
 @media screen and (max-width: 700px) {
   header .header__nav {
