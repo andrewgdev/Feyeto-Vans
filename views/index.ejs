@@ -13,33 +13,35 @@
 </head>
 <body>
     <header>
-        <h1 class="header__h1_title"><a href="#">Feyeto</a></h1>
-        
-        <nav class="header__nav">
-            <ul class="nav__ul">
-                <li class="nav__li"><a href="#">Buy</a></li>
-                <li class="nav__li"><a href="#">Sell</a></li>
-                <li class="nav__li"><a href="#">Rent</a></li>
-                <li class="nav__li"><a href="#">Sign In</a></li>
-                <li class="nav__li"><a href="#">Join</a></li>
-            </ul>
-        </nav>
-
-        <div class="hamburger__nav">
-            <input class="hamburger__input-checkbox_toggle" type="checkbox">
+        <div class="header__container">
+            <h1 class="header__h1_title"><a href="#">Feyeto</a></h1>
             
-            <div class="hamburger"><div class="hamburger__lines"></div></div>
-            
-            <nav class="hamburger__menu">
-                <ul class="hamburger__ul">
-                    <li class="hamburger__li"><a href="#">Home</a></li>
-                    <li class="hamburger__li"><a href="#">Buy</a></li>
-                    <li class="hamburger__li"><a href="#">Sell</a></li>
-                    <li class="hamburger__li"><a href="#">Rent</a></li>
-                    <li class="hamburger__li"><a href="#">Sign In</a></li>
-                    <li class="hamburger__li"><a href="#">Join</a></li>
+            <nav class="header__nav">
+                <ul class="nav__ul">
+                    <li class="nav__li"><a href="#">Buy</a></li>
+                    <li class="nav__li"><a href="#">Sell</a></li>
+                    <li class="nav__li"><a href="#">Rent</a></li>
+                    <li class="nav__li"><a href="#">Sign In</a></li>
+                    <li class="nav__li"><a href="#">Join</a></li>
                 </ul>
             </nav>
+
+            <div class="hamburger__nav">
+                <input class="hamburger__input-checkbox_toggle" type="checkbox">
+                
+                <div class="hamburger"><div class="hamburger__lines"></div></div>
+                
+                <nav class="hamburger__menu">
+                    <ul class="hamburger__ul">
+                        <li class="hamburger__li"><a href="#">Home</a></li>
+                        <li class="hamburger__li"><a href="#">Buy</a></li>
+                        <li class="hamburger__li"><a href="#">Sell</a></li>
+                        <li class="hamburger__li"><a href="#">Rent</a></li>
+                        <li class="hamburger__li"><a href="#">Sign In</a></li>
+                        <li class="hamburger__li"><a href="#">Join</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </header>
 
@@ -47,8 +49,20 @@
         <section class="hero">
             <div class="clip-path_background"></div>
             <div class="hero__div_image-container">
-                <figure>
-                    <img src="images/heroimgVan1.png" alt="Black mercedes sprinter van side view" width="100%" height="100%">
+                <figure class="hero__figure hero-500px grid-item1">
+                    <img src="images/HeroimageInterior.jpg" alt="Woman in cargo Van" width="100%" height="100%">
+                </figure>
+                
+                <figure class="hero__figure grid-item2">
+                    <img src="images/HeroimageIndex.jpg" alt="Black mercedes sprinter van side view" width="100%" height="100%">
+                </figure>
+
+                <figure class="hero__figure hero-500px grid-item3">
+                    <img src="images/HeroRam.jpg" alt="Ram Promaster" width="100%" height="100%">
+                </figure>
+
+                <figure class="hero__figure hero-500px grid-item4">
+                    <img src="images/HeroSurfInterior.jpeg" alt="Cargo van Interior with Surfboards" width="100%" height="100%">
                 </figure>
             </div>
         </section>
@@ -58,7 +72,7 @@
             
             <div class="popular-mercedes__container">
                 <figure>
-                    <img src="images/MercedesPopular.png" alt="Ram Promaster">
+                    <img src="images/MercedesPopular.jpg" alt="Ram Promaster">
                 </figure>
 
                 <div>
@@ -70,7 +84,7 @@
 
             <div class="popular-ram__container">
                 <figure>
-                    <img src="images/RamPopular.png" alt="Ford Transit">
+                    <img src="images/RamPopular.jpg" alt="Ford Transit">
                 </figure>
 
                 <div>
@@ -82,7 +96,7 @@
 
             <div class="popular-ford__container">
                 <figure>
-                    <img src="images/FordPopular.png" alt="Black Mercedes Sprinter Van">
+                    <img src="images/FordPopular.jpg" alt="Black Mercedes Sprinter Van">
                 </figure>
 
                 <div>
@@ -93,9 +107,5 @@
             </div>
         </section>
     </main>
-
-    <footer>
-
-    </footer>
 </body>
 </html>
