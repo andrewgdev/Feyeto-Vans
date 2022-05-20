@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+main {
+  height: auto;
+  width: 100%;
+}
+main .signin__h1 {
+  height: auto;
+  max-width: 300px;
+  margin: 25px auto 0;
+  text-align: center;
+}
+main .signin__figure {
+  height: auto;
+  max-width: 200px;
+  margin: 0 auto 0;
+}
+main .signin__form {
+  height: auto;
+  width: auto;
+  text-align: center;
+  margin: 0 auto 75px;
+}
+main .signin__form .form__input-container {
+  text-align: center;
+  margin: 25px auto;
+}
+main .signin__form .username__div_container, main .signin__form .password__div_container {
+  height: auto;
+  max-width: 200px;
+}
+main .signin__form .username__div_container label, main .signin__form .password__div_container label {
+  font-size: 1em;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+main .signin__form .username__div_container input, main .signin__form .password__div_container input {
+  font-size: 1em;
+  width: 200px;
+  border-radius: 5px;
+}
+main .signin__form .form__button_submit {
+  font-size: 1.1em;
+  text-align: center;
+  border: none;
+  background-color: #74ACA8;
+  color: #fff;
+  border-radius: 5px;
+  height: 37px;
+  width: 80px;
+}
+
+/*# sourceMappingURL=signin.css.map */
