@@ -71,6 +71,20 @@ main {
             @extend .form__div_title;
         }
 
+        .form__div_avatar {
+            @extend .form__div_title;
+            max-width: 300px;
+
+            label {
+                margin-bottom: 15px;
+            }
+
+            input {
+                width: 80%;
+                margin: auto;
+            }
+        }
+
         .form__button_submit {
             font-size: 1.1em;
             text-align: center;

@@ -19,16 +19,16 @@ main .sell__form .form__input-container {
   text-align: center;
   margin: 25px auto;
 }
-main .sell__form .form__div_title, main .sell__form .form__div_wheelbase, main .sell__form .form__div_mileage, main .sell__form .form__div_model, main .sell__form .form__div_make, main .sell__form .form__div_year, main .sell__form .form__div_description {
+main .sell__form .form__div_title, main .sell__form .form__div_avatar, main .sell__form .form__div_wheelbase, main .sell__form .form__div_mileage, main .sell__form .form__div_model, main .sell__form .form__div_make, main .sell__form .form__div_year, main .sell__form .form__div_description {
   height: auto;
   max-width: 200px;
 }
-main .sell__form .form__div_title label, main .sell__form .form__div_wheelbase label, main .sell__form .form__div_mileage label, main .sell__form .form__div_model label, main .sell__form .form__div_make label, main .sell__form .form__div_year label, main .sell__form .form__div_description label {
+main .sell__form .form__div_title label, main .sell__form .form__div_avatar label, main .sell__form .form__div_wheelbase label, main .sell__form .form__div_mileage label, main .sell__form .form__div_model label, main .sell__form .form__div_make label, main .sell__form .form__div_year label, main .sell__form .form__div_description label {
   font-size: 1em;
   font-weight: 600;
   letter-spacing: 1px;
 }
-main .sell__form .form__div_title input, main .sell__form .form__div_wheelbase input, main .sell__form .form__div_mileage input, main .sell__form .form__div_model input, main .sell__form .form__div_make input, main .sell__form .form__div_year input, main .sell__form .form__div_description input {
+main .sell__form .form__div_title input, main .sell__form .form__div_avatar input, main .sell__form .form__div_wheelbase input, main .sell__form .form__div_mileage input, main .sell__form .form__div_model input, main .sell__form .form__div_make input, main .sell__form .form__div_year input, main .sell__form .form__div_description input {
   font-size: 1em;
   width: 200px;
   border-radius: 5px;
@@ -39,6 +39,16 @@ main .sell__form .form__div_description textarea {
   border-radius: 5px;
   border: 2px solid black;
   resize: none;
+}
+main .sell__form .form__div_avatar {
+  max-width: 300px;
+}
+main .sell__form .form__div_avatar label {
+  margin-bottom: 15px;
+}
+main .sell__form .form__div_avatar input {
+  width: 80%;
+  margin: auto;
 }
 main .sell__form .form__button_submit {
   font-size: 1.1em;
