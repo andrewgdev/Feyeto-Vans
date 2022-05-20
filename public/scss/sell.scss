@@ -1,0 +1,137 @@
+@import "variables";
+
+main {
+    height: auto;
+    width: 100%;
+
+    .sell__h1 {
+        height: auto;
+        max-width: 300px;
+        margin: 25px auto 0;
+        text-align: center;
+    }
+
+    .sell__form {
+        height: auto;
+        width: auto;
+        text-align: center;
+        margin: 0 auto 75px;
+        
+        .form__input-container {
+            text-align: center;
+            margin: 25px auto;
+        }
+
+        .form__div_title {
+            height: auto;
+            max-width: 200px;
+
+            label {
+                font-size: 1em;
+                font-weight: 600;
+                letter-spacing: 1px;
+            }
+
+            input {
+                font-size: 1em;
+                width: 200px;
+                border-radius: 5px
+            }
+        }
+
+        .form__div_description {
+            @extend .form__div_title;
+            
+            textarea {
+                font-size: 1em;
+                width: 200px;
+                border-radius: 5px;
+                border: 2px solid black;
+                resize: none
+            }
+        }
+
+        .form__div_year {
+            @extend .form__div_title;
+        }
+
+        .form__div_make {
+            @extend .form__div_title;
+        }
+
+        .form__div_model {
+            @extend .form__div_title;
+        }
+
+        .form__div_mileage {
+            @extend .form__div_title;
+        }
+
+        .form__div_wheelbase {
+            @extend .form__div_title;
+        }
+
+        .form__button_submit {
+            font-size: 1.1em;
+            text-align: center;
+            border: none;
+            background-color: #74ACA8;
+            color: $whiteFontColor;
+            border-radius: 5px;
+            height: 37px;
+            width: 80px;
+            margin-top: 50px;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .sell__form {
+        max-width: 900px;
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto auto auto auto;
+    
+        .grid-item1 {
+            grid-area: 1/1/2/2;
+        }
+
+        .grid-item2 {
+            grid-area: 2/1/4/2;
+        }
+
+        .grid-item3 {
+            grid-area: 4/1/5/2;
+        }
+
+        .grid-item4 {
+            grid-area: 1/2/2/3;
+        }
+
+        .grid-item5 {
+            grid-area: 2/2/3/3;
+        }
+
+        .grid-item6 {
+            grid-area: 3/2/4/3;
+            
+        }
+
+        .grid-item7 {
+            grid-area: 4/2/5/3;
+        }
+
+        .grid-item8 {
+            grid-area: 6/1/7/3;
+        }
+
+
+        .form__div_description {
+            
+            textarea {
+                height: 200px;
+                width: 500px;
+            }
+        }
+    }
+}

@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+main {
+  height: auto;
+  width: 100%;
+}
+main .sell__h1 {
+  height: auto;
+  max-width: 300px;
+  margin: 25px auto 0;
+  text-align: center;
+}
+main .sell__form {
+  height: auto;
+  width: auto;
+  text-align: center;
+  margin: 0 auto 75px;
+}
+main .sell__form .form__input-container {
+  text-align: center;
+  margin: 25px auto;
+}
+main .sell__form .form__div_title, main .sell__form .form__div_wheelbase, main .sell__form .form__div_mileage, main .sell__form .form__div_model, main .sell__form .form__div_make, main .sell__form .form__div_year, main .sell__form .form__div_description {
+  height: auto;
+  max-width: 200px;
+}
+main .sell__form .form__div_title label, main .sell__form .form__div_wheelbase label, main .sell__form .form__div_mileage label, main .sell__form .form__div_model label, main .sell__form .form__div_make label, main .sell__form .form__div_year label, main .sell__form .form__div_description label {
+  font-size: 1em;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+main .sell__form .form__div_title input, main .sell__form .form__div_wheelbase input, main .sell__form .form__div_mileage input, main .sell__form .form__div_model input, main .sell__form .form__div_make input, main .sell__form .form__div_year input, main .sell__form .form__div_description input {
+  font-size: 1em;
+  width: 200px;
+  border-radius: 5px;
+}
+main .sell__form .form__div_description textarea {
+  font-size: 1em;
+  width: 200px;
+  border-radius: 5px;
+  border: 2px solid black;
+  resize: none;
+}
+main .sell__form .form__button_submit {
+  font-size: 1.1em;
+  text-align: center;
+  border: none;
+  background-color: #74ACA8;
+  color: #fff;
+  border-radius: 5px;
+  height: 37px;
+  width: 80px;
+  margin-top: 50px;
+}
+
+@media screen and (min-width: 1024px) {
+  .sell__form {
+    max-width: 900px;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto auto auto;
+  }
+  .sell__form .grid-item1 {
+    grid-area: 1/1/2/2;
+  }
+  .sell__form .grid-item2 {
+    grid-area: 2/1/4/2;
+  }
+  .sell__form .grid-item3 {
+    grid-area: 4/1/5/2;
+  }
+  .sell__form .grid-item4 {
+    grid-area: 1/2/2/3;
+  }
+  .sell__form .grid-item5 {
+    grid-area: 2/2/3/3;
+  }
+  .sell__form .grid-item6 {
+    grid-area: 3/2/4/3;
+  }
+  .sell__form .grid-item7 {
+    grid-area: 4/2/5/3;
+  }
+  .sell__form .grid-item8 {
+    grid-area: 6/1/7/3;
+  }
+  .sell__form .form__div_description textarea {
+    height: 200px;
+    width: 500px;
+  }
+}
+
+/*# sourceMappingURL=sell.css.map */

@@ -4,10 +4,63 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Sell" />
+    <meta property="og:url" content="https://www.feyeto/sell.com" />
+    <!-- <meta property="og:image" content="" /> -->
+    <link rel="stylesheet" href="css/sell.css">
+    <link rel="stylesheet" href="css/reset.css">
     <title>Sell</title>
 </head>
 <body>
     <%- include('partials/header') -%>
     
+    <main>
+        <h1 class="sell__h1">Sell</h1>
+
+        <form action="" class="sell__form">
+            <div class="form__div_title form__input-container grid-item1">
+                <label for="Title of Listing">Title of Listing:</label>
+                <input type="text">
+            </div>
+
+            <div class="form__div_description form__input-container grid-item2">
+                <label for="Description">Description:</label>
+                <textarea name="description" id="description__vehicle" cols="auto" rows="10"></textarea>
+            </div>
+
+            <div class="form__div_year form__input-container grid-item3">
+                <label for="Year">Year:</label>
+                <input type="text">
+            </div>
+
+            <div class="form__div_make form__input-container grid-item4">
+                <label for="Make">Make:</label>
+                <input type="text">
+            </div>
+
+            <div class="form__div_model form__input-container grid-item5">
+                <label for="Model">Model:</label>
+                <input type="text">
+            </div>
+
+            <div class="form__div_mileage form__input-container grid-item6">
+                <label for="Mileage">Mileage:</label>
+                <input type="text">
+            </div>
+
+            <div class="form__div_wheelbase form__input-container grid-item7">
+                <label for="Wheelbase">Wheelbase:</label>
+                <input type="text">
+            </div>
+
+            <div class="form__input-container">
+                <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg">
+            </div>
+
+            <div class="grid-item8">
+                <button type="submit" class="form__button_submit">Submit</button>
+            </div>
+        </form>
+    </main>
 </body>
 </html>
