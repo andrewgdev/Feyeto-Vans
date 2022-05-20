@@ -27,8 +27,24 @@ app.get('/', (req, res) => {
     res.render("index");
 });
 
-app.get('/register', (req, res) => {
-    res.render("register");
+app.get('/join', (req, res) => {
+    res.render("join");
+});
+
+app.get('/signin', (req, res) => {
+    res.render("signin");
+});
+
+app.get('/rent', (req, res) => {
+    res.render("rent");
+});
+
+app.get('/sell', (req, res) => {
+    res.render("sell");
+});
+
+app.get('/buy', (req, res) => {
+    res.render("buy");
 });
 
 app.listen(port, (req, res) => {

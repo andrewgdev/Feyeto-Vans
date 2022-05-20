@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Join" />
+    <meta property="og:url" content="https://www.feyeto/join.com" />
+    <!-- <meta property="og:image" content="" /> -->
+    <link rel="stylesheet" href="css/join.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <title>Join</title>
+</head>
+<body>
+    <%- include('partials/header') -%>
+    
+    <main>
+        <h1 class="join__h1">Register</h1>
+
+        <figure class="join__figure">
+            <img src="images/GreenVan.png" alt="Green Cartoon Van" width="100%" height="100%">
+        </figure>
+
+        <form action="" class="join__form">
+            <div class="username__div_container form__input-container">
+                <label for="username">Username:</label>
+                <input type="text">
+            </div>            
+            
+            <div class="email__div_container form__input-container">
+                <label for="email">Email:</label>
+                <input type="text">
+            </div>
+
+            <div class="password__div_container form__input-container">
+                <label for="password">Password:</label>
+                <input type="text">
+            </div>
+
+            <div class="confirm-password__div_container form__input-container">
+                <label for="password">Confirm Password:</label>
+                <input type="text">
+            </div>
+
+            <button type="submit" class="form__button_submit">Submit</button>
+        </form>
+    </main>
+    
+</body>
+</html>

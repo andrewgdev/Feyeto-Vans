@@ -25,7 +25,7 @@ header .header__container {
   margin: auto;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
 }
 header .header__container .header__h1_title {
   font-size: 1em;
@@ -38,13 +38,12 @@ header .header__container .header__nav {
   height: 100%;
   width: auto;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: flex-end;
   margin: auto 25px;
 }
 header .header__container .header__nav .nav__ul {
   display: flex;
-  justify-content: flex-end;
 }
 header .header__container .header__nav .nav__ul .nav__li {
   margin: 0 5px;
@@ -74,7 +73,6 @@ header .hamburger__nav .hamburger__input-checkbox_toggle {
   margin: 10px 10px;
   z-index: 3;
   cursor: pointer;
-  top: 45px;
 }
 header .hamburger__nav .hamburger {
   display: flex;
@@ -86,7 +84,6 @@ header .hamburger__nav .hamburger {
   margin: 10px 10px;
   position: absolute;
   z-index: 2;
-  top: 45px;
 }
 header .hamburger__nav .hamburger .hamburger__lines {
   height: 2.5px;

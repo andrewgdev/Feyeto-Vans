@@ -1,0 +1,71 @@
+@import "variables";
+
+main {
+    height: auto;
+    width: 100%;
+
+    .join__h1 {
+        height: auto;
+        max-width: 300px;
+        margin: 25px auto 0;
+        text-align: center;
+    }
+
+    .join__figure {
+        height: auto;
+        max-width: 200px;
+        margin: 0 auto 0;
+    }
+    
+    .join__form {
+        height: auto;
+        width: auto;
+        text-align: center;
+        margin: 0 auto 75px;
+        
+        .form__input-container {
+            text-align: center;
+            margin: 25px auto;
+        }
+
+        .username__div_container {
+            height: auto;
+            max-width: 200px;
+
+            label {
+                font-size: 1em;
+                font-weight: 600;
+                letter-spacing: 1px;
+            }
+
+            input {
+                font-size: 1em;
+                width: 200px;
+                border-radius: 5px
+            }
+        }
+
+        .email__div_container {
+            @extend .username__div_container;
+        }
+
+        .password__div_container {
+            @extend .username__div_container;
+        }
+
+        .confirm-password__div_container {
+            @extend .username__div_container;
+        }
+
+        .form__button_submit {
+            font-size: 1.1em;
+            text-align: center;
+            border: none;
+            background-color: #74ACA8;
+            color: $whiteFontColor;
+            border-radius: 5px;
+            height: 37px;
+            width: 80px;
+        }
+    }
+}
