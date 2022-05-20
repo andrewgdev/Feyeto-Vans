@@ -35,10 +35,6 @@ app.get('/signin', (req, res) => {
     res.render("signin");
 });
 
-app.get('/rent', (req, res) => {
-    res.render("rent");
-});
-
 app.get('/sell', (req, res) => {
     res.render("sell");
 });
