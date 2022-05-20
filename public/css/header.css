@@ -148,6 +148,14 @@ header .hamburger__nav .hamburger__input-checkbox_toggle:checked ~ .hamburger__m
     display: none;
   }
 }
+@media screen and (min-width: 700px) {
+  header .header__container .hamburger__nav {
+    display: none;
+  }
+  header .header__container .hamburger__menu {
+    display: none;
+  }
+}
 @media screen and (min-width: 1440px) {
   header {
     width: 100%;

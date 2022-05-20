@@ -94,12 +94,6 @@ main .popular-vans__section .popular-ford__container {
   margin-bottom: 45px;
 }
 
-footer {
-  height: 250px;
-  width: 100%;
-  background-color: #2e2e2e;
-}
-
 @media screen and (min-width: 350px) {
   main .hero {
     height: 250px;
@@ -118,10 +112,6 @@ footer {
 }
 @media screen and (max-width: 500px) {
   .hero-500px {
-    display: none;
-  }
-
-  footer {
     display: none;
   }
 }
@@ -162,10 +152,6 @@ footer {
   main .popular-vans__section .popular-vans__h2 {
     max-width: 200px;
   }
-
-  footer {
-    display: block;
-  }
 }
 @media screen and (min-width: 600px) {
   main .hero .clip-path_background {
@@ -196,14 +182,6 @@ footer {
     height: 40px;
     width: 90px;
     font-size: 1em;
-  }
-}
-@media screen and (min-width: 700px) {
-  header .header__container .hamburger__nav {
-    display: none;
-  }
-  header .header__container .hamburger__menu {
-    display: none;
   }
 }
 @media screen and (min-width: 850px) {
