@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listing</title>
+</head>
+<body>
+    <%- include('partials/header') -%>
+    
+    <div class="container__div_button">
+        <button type="button">Back</button>
+    </div>
+
+   <h1>Ram Promaster</h1>
+   
+   <figure class="">
+       <img src="images/ListingPlaceholder.jpg" alt="Listing">
+   </figure>
+
+   <div class="container__div_description grid">
+       <div class="container__description">
+           <h3>Description:</h3> 
+           <p></p> 
+       </div>       
+       
+       <div class="container__div_vehicle-specs">
+           <ul class="list__ul">
+               <li class="list-item__li">Year:</li>
+               <li class="list-item__li">Make:</li>
+               <li class="list-item__li">Model:</li>
+               <li class="list-item__li">Wheelbase:</li>
+               <li class="list-item__li">Mileage:</li>
+               <li class="list-item__li">Price:</li>
+           </ul> 
+       </div>       
+
+       <div class="container__div_contact-info">
+           <p>Phone: <span id="phone-number"></span></p>
+           <p>Email: <span id="email-address"></span></p> 
+       </div>
+   </div>
+</body>
+</html>
