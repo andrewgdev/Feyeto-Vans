@@ -1,3 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+.darken {
+  display: none;
+  position: absolute;
+  z-index: -1;
+  height: 100%;
+  width: 100vw;
+  background-color: black;
+  opacity: 0.8;
+}
 
+main {
+  height: auto;
+  width: auto;
+}
+main .filters {
+  height: inherit;
+  width: inherit;
+}
+main .filters .filters__mobile-layout {
+  height: auto;
+  width: auto;
+}
+main .filters .filters__mobile-layout .filters-container__button {
+  text-align: center;
+  margin: 20px auto;
+}
+main .filters .filters__mobile-layout .filters-container__button .filters__button {
+  height: 35px;
+  width: 60px;
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 1px;
+  background-color: #72009A;
+  border: 1px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+}
+main .filters .filters__div_popup {
+  width: 250px;
+  margin: auto;
+  display: none;
+  background-color: white;
+  border-radius: 5px;
+}
+main .filters .filters__div_popup .container__button_close-form {
+  max-width: 250px;
+  text-align: right;
+}
+main .filters .filters__div_popup .container__button_close-form .close__button {
+  height: 40px;
+  width: 40px;
+  background-color: rgb(214, 0, 0);
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.25em;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+main .filters .filters__div_popup .filters__h1 {
+  text-align: center;
+}
+main .filters .filters__div_popup .filters__form_popup {
+  max-width: 250px;
+  margin: 20px auto;
+}
+main .filters .filters__div_popup .filters__form_popup .filter-container__div {
+  margin: 15px auto;
+}
+main .filters .filters__div_popup .filters__form_popup .form__button_apply-filters {
+  margin: 30px auto;
+  text-align: center;
+}
+main .filters .filters__div_popup .filters__form_popup .form__button_apply-filters .form__button {
+  height: 37px;
+  width: 80px;
+  margin: 15px auto;
+  border-radius: 5px;
+  border: none;
+  background-color: #74ACA8;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 701px) {
+  main .filters .filters__mobile-layout {
+    display: none;
+  }
+}
 
 /*# sourceMappingURL=buy.css.map */

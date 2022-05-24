@@ -13,6 +13,10 @@ li, a {
   list-style: none;
 }
 
+body {
+  min-height: 100vh;
+}
+
 header {
   height: 100px;
   width: 100%;
@@ -71,7 +75,7 @@ header .hamburger__nav .hamburger__input-checkbox_toggle {
   width: 45px;
   opacity: 0;
   margin: 10px 10px;
-  z-index: 3;
+  z-index: 5;
   cursor: pointer;
 }
 header .hamburger__nav .hamburger {
@@ -83,7 +87,7 @@ header .hamburger__nav .hamburger {
   background-color: #454545;
   margin: 10px 10px;
   position: absolute;
-  z-index: 2;
+  z-index: 4;
 }
 header .hamburger__nav .hamburger .hamburger__lines {
   height: 2.5px;
@@ -105,7 +109,7 @@ header .hamburger__nav .hamburger .hamburger__lines::after {
 header .hamburger__nav .hamburger__menu {
   visibility: hidden;
   position: fixed;
-  z-index: 1;
+  z-index: 3;
   height: 100vh;
   width: 100vw;
   background-color: #2e2e2e;
@@ -145,7 +149,7 @@ header .hamburger__nav .hamburger__input-checkbox_toggle:checked ~ .hamburger__m
     display: none;
   }
 }
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 701px) {
   header .header__container .hamburger__nav {
     display: none;
   }

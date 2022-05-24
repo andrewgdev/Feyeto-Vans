@@ -4,22 +4,123 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/buy.css">
     <title>Buy</title>
 </head>
-<body>
+<body id="body">
+    <div class="darken"></div>
     <%- include('partials/header') -%>
     
     <main>
         <div class="filters">
-            <div class="filters__mobile-layout">
-                <button class="filters__button">Filters</button>
+            <div class="filters__mobile-layout"> <!--Display at screen size 750px or less-->
+                <div class="filters-container__button">
+                    <button class="filters__button" id="filter__button-popup" onclick="formFiltersPopup()">Filters</button>
+                </div>           
             </div>
 
-            <div class="filters__div_popup">
 
+            <div class="filters__div_popup"><!--Display at screen size 750px or less-->
+                <div class="container__button_close-form">
+                    <button class="close__button" type="button" onclick="closePopupForm()">X</button>
+                </div>
+                
+                <form action="#" class="filters__form_popup" id="filter-popup">
+                    
+                    <div class="filter-container__div">
+                        <label for="year">Year:</label>
+                        <select name="year" id="year">
+                            <option value="2022">2022</option>
+                            <option value="2021">2021</option>
+                            <option value="2020">2020</option>
+                            <option value="2019">2019</option>
+                            <option value="2018">2018</option>
+                            <option value="2017">2017</option>
+                            <option value="2016">2016</option>
+                            <option value="2015">2015</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-container__div">
+                        <label for="make">Make:</label>
+                        <select name="make" id="make">
+                            <option value="ford" class="ford">Ford</option>
+                            <option value="fiat" id="fiat">Fiat</option>
+                            <option value="chevy" id="chevy">Chevy</option>
+                            <option value="mercedes" id="mercedes">Mercedes</option>
+                            <option value="nissan" id="nissan">Nissan</option>
+                            <option value="ram" id="ram">Ram</option>
+                            <option value="toyota" id="toyota">Toyota</option>
+                        </select>
+                    </div>
+                    <!-- SHOW ONLY MODELS THAT HAVE THE SAME 
+                         CLASS AS THE SELECTED MAKE-->
+                    <div class="filter-container__div">
+                        <label for="model">Model:</label>
+                        <select name="model" id="model">
+                            <option value="transit Cargo Van" class="ford">Transit Cargo Van</option>
+                            <option value="transit Crew Van" class="ford">Transit Crew Van</option>
+                            <option value="transit Passenger Van XL" class="ford">Passenger Van XL</option>
+                            <option value="transit Passenger Van XLT" class="ford">Passenger Van XLT</option>
+                            <option value="promaster 1500" class="ram">Promaster 1500</option>
+                            <option value="promaster 2500" class="ram">Promaster 2500</option>
+                            <option value="promaster 3500" class="ram">Promaster 3500</option>
+                            <option value="astro" class="chevy">Astro</option>
+                            <option value="express" class="chevy">Express</option>
+                            <option value="mercedes Cargo Van" class="mercedes">Cargo van</option>
+                            <option value="mercedes Crew Van" class="mercedes">Crew Van</option>
+                            <option value="mercedes Crew Van" class="mercedes">Passenger Van</option>
+                            <option value="nissan nv cargo" class="nissan">NV Cargo</option>
+                            <option value="ducato" class="fiat">Ducato</option>
+                            <option value="tacoma" class="toyota">Tacoma</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-container__div">
+                        <label for="mileage">Mileage:</label>
+                        <select name="mileage" id="mileage">
+                            <option value="0-10k">0-10k</option>
+                            <option value="10k-20k">10k-20k</option>
+                            <option value="20k-30k">20k-30k</option>
+                            <option value="30k-40k">30k-40k</option>
+                            <option value="40k-60k">40k-60k</option>
+                            <option value="60k-80k">60k-80k</option>
+                            <option value="80k-100k">80k-100k</option>
+                            <option value="100k-120k">100k-120k</option>
+                            <option value="120k-140k">120k-140k</option>
+                            <option value="140k-170k">140k-170k</option>
+                            <option value="170k-200k">170k-200k</option>
+                            <option value="200k+">200k+</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-container__div">
+                        <label for="new/used">New/Used:</label>
+                        <label for="new">New</label>
+                        <input type="checkbox" name="new" id="new">
+                        <label for="used">Used</label>
+                        <input type="checkbox" name="used" id="used">
+                    </div>
+                    
+                    <div class="filter-container__div">
+                        <label for="price">Price:</label>
+                        <select name="price" id="price">
+                            <option value="0-20k">0-20k</option>
+                            <option value="20k-40k">20k-40k</option>
+                            <option value="40k-60k">40k-60k</option>
+                            <option value="60k-80k">60k-80k</option>
+                            <option value="80k-100k">100k+</option>
+                        </select>
+                    </div>
+
+                    <div class="form__button_apply-filters">
+                        <button type="submit" class="form__button">Apply</button>
+                    </div>
+                </form>
             </div>
 
-            <div class="filters__desktop-layout">
+            <div class="filters__desktop-layout"><!--Display at screen size 750px or more-->
 
             </div>
 
@@ -28,4 +129,5 @@
 
     </main>
 </body>
+<script src="js/buy.js"></script>
 </html>

@@ -1,0 +1,112 @@
+@import "variables";
+
+.darken {
+    display: none;
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    width: 100vw;
+    background-color: black;
+    opacity: 0.8;
+}
+
+main {
+    height: auto;
+    width: auto;
+
+    .filters {
+        height: inherit;
+        width: inherit;
+
+        .filters__mobile-layout {
+            height: auto;
+            width: auto;
+            
+            .filters-container__button {
+                text-align: center;
+                margin: 20px auto;
+                
+                .filters__button {
+                    height: 35px;
+                    width: 60px;
+                    color: $whiteFontColor;
+                    font-weight: 500;
+                    letter-spacing: 1px;
+                    background-color: $purpleBackgroundColor;
+                    border: 1px solid black;
+                    border-radius: 5px;
+                    cursor: pointer;
+                }
+            }
+        }
+
+
+        .filters__div_popup {
+            width: 250px;
+            margin: auto;
+            display: none;
+            background-color: white;
+            border-radius: 5px;
+
+            .container__button_close-form {
+                max-width: 250px;
+                text-align: right;
+                
+                .close__button {
+                    height: 40px;
+                    width: 40px;
+                    background-color: rgb(214, 0, 0);
+                    color: $whiteFontColor;
+                    font-weight: 500;
+                    font-size: 1.25em;
+                    border-radius: 5px;
+                    border: none;
+                    cursor: pointer;
+                }
+            }
+            
+            .filters__h1 {
+                text-align: center;
+            }
+
+            .filters__form_popup {
+                max-width: 250px;
+                margin: 20px auto;
+
+                .filter-container__div {
+                    margin: 15px auto;
+                }
+
+                .form__button_apply-filters {
+                    margin: 30px auto;
+                    text-align: center;
+
+                    .form__button {
+                        height: 37px;
+                        width: 80px;
+                        margin: 15px auto;
+                        border-radius: 5px;
+                        border: none;
+                        background-color: #74ACA8;
+                        color: $whiteFontColor;
+                        font-weight: 600;
+                        letter-spacing: 1px;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 701px) {
+    main {
+    
+        .filters {
+    
+            .filters__mobile-layout {
+                display: none;
+            }
+        }
+    }
+}
