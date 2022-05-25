@@ -58,9 +58,6 @@ main .filters .filters__div_popup .container__button_close-form .close__button {
   border: none;
   cursor: pointer;
 }
-main .filters .filters__div_popup .filters__h1 {
-  text-align: center;
-}
 main .filters .filters__div_popup .filters__form_popup {
   max-width: 250px;
   margin: 20px auto;
@@ -84,9 +81,121 @@ main .filters .filters__div_popup .filters__form_popup .form__button_apply-filte
   letter-spacing: 1px;
   cursor: pointer;
 }
+main .filters .filters__desktop-layout {
+  height: auto;
+  width: 100%;
+}
+main .filters .filters__desktop-layout .container__div_filter-buttons {
+  height: auto;
+  width: inherit;
+  margin: 25px auto;
+  text-align: center;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  row-gap: 40px;
+  align-items: center;
+  justify-content: center;
+}
+main .filters .filters__desktop-layout .container__div_filter-buttons .filter__dropdown-container {
+  height: auto;
+  width: auto;
+}
+main .filters .filters__desktop-layout .container__div_filter-buttons .filter__dropdown-container .filter__button {
+  height: 37px;
+  width: 80px;
+  font-weight: 500;
+  margin: 0 25px;
+  background-color: #72009A;
+  color: #fff;
+  border: 1.75px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+}
+main .filters .filters__desktop-layout .container__div_filter-buttons .filter__dropdown-container .drop-down-content__div {
+  visibility: hidden;
+  display: grid;
+  position: absolute;
+  width: 130px;
+}
+main .filters .filters__desktop-layout .container__div_filter-buttons .filter__dropdown-container .drop-down-content__div button {
+  height: 30px;
+  font-weight: 500;
+  color: #000;
+  background-color: white;
+  border: 1px solid black;
+}
+main .filters .filters__desktop-layout .container__div_filter-buttons .filter__dropdown-container .drop-down-content__div button:hover {
+  background-color: #74ACA8;
+}
+main .filters .filters__desktop-layout .container__div_filter-buttons .filter__dropdown-container:hover .drop-down-content__div {
+  visibility: visible;
+}
+main .filters .filters__desktop-layout .container__div_filter-buttons .filter__button_new-used {
+  height: 37px;
+  width: 80px;
+  font-weight: 500;
+  margin: 0 25px;
+  background-color: #72009A;
+  color: #fff;
+  border: 1.75px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+}
+main .filters .filters__desktop-layout .container__div_filter-buttons .filter__div_price {
+  height: auto;
+  width: 100%;
+}
+main .filters .filters__desktop-layout .container__div_filter-buttons .filter__div_price label {
+  font-weight: 500;
+}
+main .filters .filters__desktop-layout .container__div_filter-buttons .filter__div_price input {
+  height: auto;
+  width: 250px;
+}
+main .filters .filters__desktop-layout .container__div_filter-buttons .filter__div_apply {
+  height: auto;
+  width: auto;
+}
+main .filters .filters__desktop-layout .container__div_filter-buttons .filter__div_apply .filter__button_apply {
+  height: 37px;
+  width: 80px;
+  font-weight: 500;
+  margin: 0 20px;
+  background-color: #74ACA8;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+main .filters .filters__desktop-layout .container__div_filter-buttons .grid-item1 {
+  grid-area: 1/1/2/2;
+}
+main .filters .filters__desktop-layout .container__div_filter-buttons .grid-item2 {
+  grid-area: auto;
+}
+main .filters .filters__desktop-layout .container__div_filter-buttons .grid-item3 {
+  grid-area: auto;
+}
+main .filters .filters__desktop-layout .container__div_filter-buttons .grid-item4 {
+  grid-area: auto;
+}
+main .filters .filters__desktop-layout .container__div_filter-buttons .grid-item5 {
+  grid-area: auto;
+}
+main .filters .filters__desktop-layout .container__div_filter-buttons .grid-item6 {
+  grid-area: 2/1/3/4;
+}
+main .filters .filters__desktop-layout .container__div_filter-buttons .grid-item7 {
+  grid-area: 2/4/3/6;
+}
 
 @media screen and (min-width: 701px) {
   main .filters .filters__mobile-layout {
+    display: none;
+  }
+}
+@media screen and (max-width: 701px) {
+  main .filters .filters__desktop-layout {
     display: none;
   }
 }

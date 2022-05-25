@@ -65,10 +65,6 @@ main {
                 }
             }
             
-            .filters__h1 {
-                text-align: center;
-            }
-
             .filters__form_popup {
                 max-width: 250px;
                 margin: 20px auto;
@@ -96,6 +92,134 @@ main {
                 }
             }
         }
+
+        .filters__desktop-layout {
+            height: auto;
+            width: 100%;
+
+            .container__div_filter-buttons {
+                height: auto;
+                width: inherit;
+                margin: 25px auto;
+                text-align: center;
+                display: grid;
+                grid-template-columns: auto auto auto auto auto;
+                row-gap: 40px;
+                align-items: center;
+                justify-content: center;
+
+                .filter__dropdown-container {
+                    height: auto;
+                    width: auto;
+
+                    .filter__button {
+                        height: 37px;
+                        width: 80px;
+                        font-weight: 500;
+                        margin: 0 25px;
+                        background-color: $purpleBackgroundColor;
+                        color: $whiteFontColor;
+                        border: 1.75px solid black;
+                        border-radius: 5px;
+                        cursor: pointer;
+                    }
+    
+                    .drop-down-content__div {
+                        visibility: hidden;
+                        display: grid;
+                        position: absolute;
+                        width: 130px;
+                        
+                        button {
+                            height: 30px;
+                            font-weight: 500;
+                            color: $blackFontColor;
+                            background-color: white;
+                            border: 1px solid black;
+                        }
+
+                        button:hover {
+                            background-color: #74ACA8;
+                        }
+                    }
+                }
+
+                .filter__dropdown-container:hover .drop-down-content__div {
+                    visibility: visible;
+                }
+
+                .filter__button_new-used {
+                    height: 37px;
+                    width: 80px;
+                    font-weight: 500;
+                    margin: 0 25px;
+                    background-color: $purpleBackgroundColor;
+                    color: $whiteFontColor;
+                    border: 1.75px solid black;
+                    border-radius: 5px;
+                    cursor: pointer;
+                }
+                
+                .filter__div_price {
+                    height: auto;
+                    width: 100%;
+                    
+                    label {
+                        font-weight: 500;
+                    }
+                    
+                    input {
+                        height: auto;
+                        width: 250px;
+                    }
+                }
+                
+                .filter__div_apply {
+                    height: auto;
+                    width: auto;
+
+                    .filter__button_apply {
+                        height: 37px;
+                        width: 80px;
+                        font-weight: 500;
+                        margin: 0 20px;
+                        background-color: #74ACA8;
+                        color: $whiteFontColor;
+                        border: none;
+                        border-radius: 5px;
+                        cursor: pointer;
+                    }
+                }
+
+                .grid-item1 {
+                    grid-area: 1/1/2/2;
+                }
+
+                .grid-item2 {
+                    grid-area: auto;
+                }
+
+                .grid-item3 {
+                    grid-area: auto;
+                }
+
+                .grid-item4 {
+                    grid-area: auto;
+                }
+
+                .grid-item5 {
+                    grid-area: auto;
+                }
+
+                .grid-item6 {
+                    grid-area: 2/1/3/4;
+                }
+
+                .grid-item7 {
+                    grid-area: 2/4/3/6;
+                }
+            }
+        }
     }
 }
 
@@ -107,6 +231,18 @@ main {
             .filters__mobile-layout {
                 display: none;
             }
+        }
+    }
+}
+
+@media screen and (max-width: 701px) {
+    main {
+        .filters {
+
+            .filters__desktop-layout {
+                display: none;
+            }
+
         }
     }
 }

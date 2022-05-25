@@ -13,10 +13,10 @@
     <%- include('partials/header') -%>
     
     <main>
-        <div class="filters">
+        <section class="filters">
             <div class="filters__mobile-layout"> <!--Display at screen size 750px or less-->
                 <div class="filters-container__button">
-                    <button class="filters__button" id="filter__button-popup" onclick="formFiltersPopup()">Filters</button>
+                    <button class="filters__button" id="filter__button-popup" onclick="openFormFiltersPopup()">Filters</button>
                 </div>           
             </div>
 
@@ -45,7 +45,7 @@
                     <div class="filter-container__div">
                         <label for="make">Make:</label>
                         <select name="make" id="make">
-                            <option value="ford" class="ford">Ford</option>
+                            <option value="ford" id="ford">Ford</option>
                             <option value="fiat" id="fiat">Fiat</option>
                             <option value="chevy" id="chevy">Chevy</option>
                             <option value="mercedes" id="mercedes">Mercedes</option>
@@ -120,12 +120,89 @@
             </div>
 
             <div class="filters__desktop-layout"><!--Display at screen size 750px or more-->
+                <div class="container__div_filter-buttons">
+                    
+                    <div class="filter__dropdown-container grid-item1">
+                        <button type="button" class="filter__button">Year</button>
+                        <div class="drop-down-content__div">
+                            <button type="button" value="2021">2021</button>
+                            <button type="button" value="2020">2020</button>
+                            <button type="button" value="2019">2019</button>
+                            <button type="button" value="2018">2018</button>
+                            <button type="button" value="2017">2017</button>
+                            <button type="button" value="2022">2022</button>
+                            <button type="button" value="2016">2016</button>
+                            <button type="button" value="2015">2015</button>
+                        </div>
+                    </div>
 
+                    <div class="filter__dropdown-container grid-item2">
+                        <button type="button" class="filter__button">Make</button>
+                        <div class="drop-down-content__div">
+                            <button value="ford" id="ford">Ford</button>
+                            <button value="fiat" id="fiat">Fiat</button>
+                            <button value="chevy" id="chevy">Chevy</button>
+                            <button value="mercedes" id="mercedes">Mercedes</button>
+                            <button value="nissan" id="nissan">Nissan</button>
+                            <button value="ram" id="ram">Ram</button>
+                            <button value="toyota" id="toyota">Toyota</button>
+                        </div>
+                    </div>
+
+                    <div class="filter__dropdown-container grid-item3">
+                        <button type="button" class="filter__button">Model</button>
+                        <div class="drop-down-content__div">
+                            <button value="transit Cargo Van" class="ford">Transit Cargo Van</button>
+                            <button value="transit Crew Van" class="ford">Transit Crew Van</button>
+                            <button value="transit Passenger Van XL" class="ford">Passenger Van XL</button>
+                            <button value="transit Passenger Van XLT" class="ford">Passenger Van XLT</button>
+                            <button value="promaster 1500" class="ram">Promaster 1500</button>
+                            <button value="promaster 2500" class="ram">Promaster 2500</button>
+                            <button value="promaster 3500" class="ram">Promaster 3500</button>
+                            <button value="astro" class="chevy">Astro</button>
+                            <button value="express" class="chevy">Express</button>
+                            <button value="mercedes Cargo Van" class="mercedes">Cargo van</button>
+                            <button value="mercedes Crew Van" class="mercedes">Crew Van</button>
+                            <button value="mercedes Crew Van" class="mercedes">Passenger Van</button>
+                            <button value="nissan nv cargo" class="nissan">NV Cargo</button>
+                            <button value="ducato" class="fiat">Ducato</button>
+                            <button value="tacoma" class="toyota">Tacoma</button>
+                        </div>
+                    </div>
+
+
+                    <div class="filter__dropdown-container grid-item4">
+                        <button type="button" class="filter__button">Mileage</button>
+                        <div class="drop-down-content__div">
+                            <button value="0-10k">0-10k</button>
+                            <button value="10k-20k">10k-20k</button>
+                            <button value="20k-30k">20k-30k</button>
+                            <button value="30k-40k">30k-40k</button>
+                            <button value="40k-60k">40k-60k</button>
+                            <button value="60k-80k">60k-80k</button>
+                            <button value="80k-100k">80k-100k</button>
+                            <button value="100k-120k">100k-120k</button>
+                            <button value="120k-140k">120k-140k</button>
+                            <button value="140k-170k">140k-170k</button>
+                            <button value="170k-200k">170k-200k</button>
+                            <button value="200k+">200k+</button>
+                        </div>
+                    </div>
+                    
+                    <button type="button" class="filter__button_new-used grid-item5" onclick="filterNewOrUsed()">New</button><!-- NOT A HOVER BUTTON-->
+                    
+                    <div class="filter__div_price grid-item6">
+                        <label for="price">Price:</label>
+                        <input type="range" name="price" id="price-range" min="0" max="100000" step="1000" oninput="priceRangeChange()">
+                        <p id="number__p_price">$50000</p>
+                    </div>
+
+                    <div class="filter__div_apply grid-item7">
+                        <button type="submit" class="filter__button_apply">Apply</button>
+                    </div>
+                </div>
             </div>
-
-        </div>
-
-
+        </section>
     </main>
 </body>
 <script src="js/buy.js"></script>
