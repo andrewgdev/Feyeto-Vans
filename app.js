@@ -1,5 +1,5 @@
 // SERVER
-
+require('dotenv').config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
@@ -27,6 +27,20 @@ livereloadServer.server.once("connection", () => {
 
 app.use(connectLiveReload())
 
+// MongoDB DATABASE
+
+mongoose.connect("mongodb://localhost:27017/feyetovansDB");
+
+const userSchema = new mongoose.Schema ({
+    email: String,
+    username: String,
+    password: String,
+})
+
+const secret = "thisisasecretpass!."
+userSchema.plugin(encrypt, { secret: secret, encryptedFields: ["password"] });
+
+const User = new mongoose.model("User", userSchema);
 
 app.get('/', (req, res) => {
     res.render("index");
@@ -49,7 +63,19 @@ app.get('/buy', (req, res) => {
 });
 
 app.post('/register', (req, res) => {
-    res.render("userdashboard");
+    // res.render("userdashboard");
+    const newUser = new User ({
+        email: req.body.username,
+        password: req.body.password,
+        username: req.body.username
+    })
+    newUser.save(function(err) {
+        if (err) {
+            console.log(err);
+        } else {
+                res.render("userdashboard");
+        }
+    });
 });
 
 // GET RID OF APP.GET FOR USERDASHBOARD AND ONLY SHOW THIS WHEN USER LOGINS THROUGH REGISTER PAGE
@@ -61,8 +87,4 @@ app.listen(port, (req, res) => {
     console.log("Listening on port 3000!");
 });
 
-
-// MongoDB DATABASE
-
-mongoose.connect("mongodb://localhost:27017/fruitsDB");
 
