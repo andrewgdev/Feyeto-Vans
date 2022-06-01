@@ -23,7 +23,7 @@
 
             <div class="filters__div_popup"><!--Display at screen size 750px or less-->
                 <div class="container__button_close-form">
-                    <button class="close__button" type="button" onclick="closePopupForm()">X</button>
+                    <button class="close__button" type="button" onclick="closeFormFiltersPopup()">X</button>
                 </div>
                 
                 <form action="#" class="filters__form_popup" id="filter-popup">
@@ -193,7 +193,7 @@
                     
                     <div class="filter__div_price grid-item6">
                         <label for="price">Price:</label>
-                        <input type="range" name="price" id="price-range" min="0" max="100000" step="1000" oninput="priceRangeChange()">
+                        <input type="range" name="price" id="price-range" min="0" max="100000" step="1000" oninput="priceRangeTextChange()">
                         <p id="number__p_price">$50000</p>
                     </div>
 
@@ -203,6 +203,13 @@
                 </div>
             </div>
         </section>
+
+        <!-- <section class="listings__section">
+            <div class="listings-container__div grid">
+
+            </div>
+        </section> -->
+
     </main>
 </body>
 <script src="js/buy.js"></script>

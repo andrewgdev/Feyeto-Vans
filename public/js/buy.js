@@ -7,7 +7,7 @@ function openFormFiltersPopup() {
 
 }
 
-function closePopupForm() {
+function closeFormFiltersPopup() {
     const popupForm = document.querySelector(".filters__div_popup");
     const body = document.querySelector(".darken");
 
@@ -15,7 +15,7 @@ function closePopupForm() {
     body.style.display = "none";
 }
 
-function priceRangeChange() {
+function priceRangeTextChange() {
     const inputRangeNumber = document.getElementById("price-range").value;
     
     document.getElementById("number__p_price").innerHTML = "$" + inputRangeNumber;    
