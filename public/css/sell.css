@@ -60,6 +60,7 @@ main .sell__form .form__button_submit {
   height: 37px;
   width: 80px;
   margin-top: 50px;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 1024px) {

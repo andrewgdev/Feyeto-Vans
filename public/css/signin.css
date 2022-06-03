@@ -47,6 +47,7 @@ main .signin__form .form__button_submit {
   border-radius: 5px;
   height: 37px;
   width: 80px;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=signin.css.map */
