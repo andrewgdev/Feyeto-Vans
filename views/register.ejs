@@ -7,9 +7,9 @@
     <meta property="og:title" content="Join" />
     <meta property="og:url" content="https://www.feyeto/join.com" />
     <!-- <meta property="og:image" content="" /> -->
-    <link rel="stylesheet" href="css/join.css">
+    <link rel="stylesheet" href="css/register.css">
     <link rel="stylesheet" href="css/reset.css">
-    <title>Join</title>
+    <title>Register</title>
 </head>
 <body>
     <%- include('partials/header') -%>
@@ -24,34 +24,51 @@
         <div class="input-guidelines__div">
             <h3>Guidelines</h3>
 
-            <p><span style="font-weight: 600;">Username and Passwords:</span> You are not allowed to use the following characters: , / ; : '' "" \ | . </p>
-            <p><span style="font-weight: 600;">Email:</span> has to be a valid email address registered to the user currently registering</p>
+            <p><span style="font-weight: 600;">Username and Passwords:</span> You are not allowed to leave spaces nor use the following characters: , / ; : '' "" \ | . </p>
+            <p><span style="font-weight: 600;">Email:</span> Has to be a valid email address registered to the user currently registering</p>
         </div>
-
+        
         <form action="/register" class="join__form" method="post">
             <div class="username__div_container form__input-container">
                 <label for="username">Username:</label>
-                <input type="text">
-            </div>            
-            
+                <p style="font-size: 0.75em; font-weight: 600;"><span style="font-weight: 600; opacity: 0.4;">Minimum Character Length:</span> 8</p>
+                <input id="username-input" 
+                    type="text" 
+                    required 
+                    autocomplete="on" 
+                    autofocus 
+                    minlength="8" 
+                    maxlength="16"
+                    oninput="whitespaceIdentifier(event)"
+                    oninput="invalidCharacterUsername(event)"
+                >
+            </div>       
+
             <div class="email__div_container form__input-container">
                 <label for="email">Email:</label>
-                <input type="text">
+                <input type="text" required autocomplete="on">
             </div>
 
             <div class="password__div_container form__input-container">
                 <label for="password">Password:</label>
-                <input type="text">
+                <p style="font-size: 0.75em; font-weight: 600;"><span style="font-weight: 600; opacity: 0.4;">Minimum Character Length:</span> 8</p>
+                <input id="password-input" 
+                    type="password" 
+                    required minlength="8" 
+                    maxlength="16" 
+                    oninput="whitespaceIdentifier(event)"
+                    oninput="invalidCharacterUsername(event)"
+                >
             </div>
 
             <div class="confirm-password__div_container form__input-container">
                 <label for="password">Confirm Password:</label>
-                <input type="text">
+                <input type="password" required>
             </div>
 
             <button type="submit" class="form__button_submit">Submit</button>
         </form>
     </main>
-    
 </body>
+<script src="js/register.js"></script>
 </html>
