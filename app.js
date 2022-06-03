@@ -37,8 +37,8 @@ const userSchema = new mongoose.Schema ({
     password: String,
 })
 
-const secret = "thisisasecretpass!."
-userSchema.plugin(encrypt, { secret: secret, encryptedFields: ["password"] });
+
+userSchema.plugin(encrypt, { secret: process.env.SECRET, encryptedFields: ["password"] });
 
 const User = new mongoose.model("User", userSchema);
 
@@ -63,7 +63,6 @@ app.get('/buy', (req, res) => {
 });
 
 app.post('/register', (req, res) => {
-    // res.render("userdashboard");
     const newUser = new User ({
         email: req.body.username,
         password: req.body.password,
@@ -73,15 +72,27 @@ app.post('/register', (req, res) => {
         if (err) {
             console.log(err);
         } else {
-                res.render("userdashboard");
+            res.render("userdashboard");
         }
     });
 });
 
-// GET RID OF APP.GET FOR USERDASHBOARD AND ONLY SHOW THIS WHEN USER LOGINS THROUGH REGISTER PAGE
-// app.get('/userdashboard', (req, res) => {
-//     res.render("userdashboard");
-// });
+app.post('/signin', (req, res) => {
+    const username = req.body.username;
+    const password = req.body.password;
+
+    User.findOne({username: username}, (err, foundUser) => {
+        if (err) {
+            console.log(err);
+        } else {
+            if (foundUser) {
+                if (foundUser.password === password) {
+                    res.render("userdashboard");
+                }
+            } 
+        }
+    })
+});
 
 app.listen(port, (req, res) => {
     console.log("Listening on port 3000!");
