@@ -51,6 +51,8 @@ main .join__form .username__div_container label, main .join__form .confirm-passw
 }
 main .join__form .username__div_container input, main .join__form .confirm-password__div_container input, main .join__form .password__div_container input, main .join__form .email__div_container input {
   font-size: 1em;
+  padding-left: 5px;
+  padding-right: 5px;
   width: 200px;
   border-radius: 5px;
 }
@@ -63,6 +65,7 @@ main .join__form .form__button_submit {
   border-radius: 5px;
   height: 37px;
   width: 80px;
+  cursor: pointer;
 }
 
-/*# sourceMappingURL=join.css.map */
+/*# sourceMappingURL=register.css.map */

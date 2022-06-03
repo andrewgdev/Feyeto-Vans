@@ -59,8 +59,10 @@ main {
 
             input {
                 font-size: 1em;
+                padding-left: 5px;
+                padding-right: 5px;
                 width: 200px;
-                border-radius: 5px
+                border-radius: 5px;
             }
         }
 
@@ -85,6 +87,7 @@ main {
             border-radius: 5px;
             height: 37px;
             width: 80px;
+            cursor: pointer;
         }
     }
 }
