@@ -33,14 +33,14 @@
                 <label for="username">Username:</label>
                 <p style="font-size: 0.75em; font-weight: 600;"><span style="font-weight: 600; opacity: 0.4;">Minimum Character Length:</span> 8</p>
                 <input id="username-input" 
+                    name="username"
                     type="text" 
                     required 
                     autocomplete="on" 
                     autofocus 
                     minlength="8" 
                     maxlength="16"
-                    oninput="whitespaceIdentifier(event)"
-                    oninput="invalidCharacterUsername(event)"
+                    oninput="whitespaceIdentifier(event), invalidCharacterUsername(event)"
                 >
             </div>       
 
@@ -56,15 +56,14 @@
                     type="password" 
                     required minlength="8" 
                     maxlength="16" 
-                    oninput="whitespaceIdentifier(event)"
-                    oninput="invalidCharacterUsername(event)"
+                    oninput="whitespaceIdentifier(event), invalidCharacterUsername(event)"
                 >
             </div>
 
-            <div class="confirm-password__div_container form__input-container">
+            <!-- <div class="confirm-password__div_container form__input-container">
                 <label for="password">Confirm Password:</label>
                 <input type="password" required>
-            </div>
+            </div> -->
 
             <button type="submit" class="form__button_submit">Submit</button>
         </form>

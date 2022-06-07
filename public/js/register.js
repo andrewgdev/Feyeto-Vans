@@ -6,8 +6,7 @@ function whitespaceIdentifier(event) {
     const whitespacesearch = /\s/g;
     let detectedWhitespace = inputElement.match(whitespacesearch);
 
-    detectedWhitespace ? formButtonSubmit.setAttribute("disabled", "") : console.log("continue");
-    
+    detectedWhitespace ? formButtonSubmit.setAttribute("disabled", "") : formButtonSubmit.removeAttribute("disabled");
 } 
 
 function invalidCharacterUsername(event) {
@@ -17,6 +16,6 @@ function invalidCharacterUsername(event) {
     const invalidCharacters = /[,/;:'"\|]/g;
     let detectedInvalidCharacters = inputElement.match(invalidCharacters);
 
-    detectedInvalidCharacters ? formButtonSubmit.setAttribute("disabled", "") : console.log("continue");
+    detectedInvalidCharacters ? formButtonSubmit.setAttribute("disabled", "") : formButtonSubmit.removeAttribute("disabled");
 
 }
