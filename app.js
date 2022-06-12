@@ -28,7 +28,7 @@ livereloadServer.server.once("connection", () => {
 app.use(connectLiveReload())
 
 // MongoDB DATABASE
-mongoose.connect("mongodb://localhost:27017/feyetovansDB");
+mongoose.connect("mongodb+srv://andg_97:Veronica_1019@feyetovans.bftci.mongodb.net/feyetovansDB");
 
 //SCHEMAS
 const userSchema = new mongoose.Schema ({
