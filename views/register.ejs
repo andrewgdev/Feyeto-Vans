@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:title" content="Join" />
     <meta property="og:url" content="https://www.feyeto/join.com" />
-    <!-- <meta property="og:image" content="" /> -->
     <link rel="stylesheet" href="css/register.css">
     <link rel="stylesheet" href="css/reset.css">
     <title>Register</title>
@@ -46,7 +45,7 @@
 
             <div class="email__div_container form__input-container">
                 <label for="email">Email:</label>
-                <input type="text" required autocomplete="on">
+                <input type="text" required autocomplete="on" name="email">
             </div>
 
             <div class="password__div_container form__input-container">
@@ -54,16 +53,12 @@
                 <p style="font-size: 0.75em; font-weight: 600;"><span style="font-weight: 600; opacity: 0.4;">Minimum Character Length:</span> 8</p>
                 <input id="password-input" 
                     type="password" 
+                    name="password"
                     required minlength="8" 
                     maxlength="16" 
                     oninput="whitespaceIdentifier(event), invalidCharacterUsername(event)"
                 >
             </div>
-
-            <!-- <div class="confirm-password__div_container form__input-container">
-                <label for="password">Confirm Password:</label>
-                <input type="password" required>
-            </div> -->
 
             <button type="submit" class="form__button_submit">Submit</button>
         </form>

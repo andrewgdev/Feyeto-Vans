@@ -48,6 +48,7 @@ header .header__container .header__nav {
 }
 header .header__container .header__nav .nav__ul {
   display: flex;
+  align-items: center;
 }
 header .header__container .header__nav .nav__ul .nav__li {
   margin: 0 5px;
@@ -57,6 +58,9 @@ header .header__container .header__nav .nav__ul .nav__li a {
 }
 header .header__container .header__nav .nav__ul .nav__li a:hover {
   color: #9D00D4;
+}
+header .header__container .header__nav .nav__ul .nav__li img {
+  border-radius: 5px;
 }
 header .hamburger__nav {
   display: flex;

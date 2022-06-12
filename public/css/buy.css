@@ -3,7 +3,7 @@
   display: none;
   position: absolute;
   z-index: -1;
-  height: 100%;
+  height: 130%;
   width: 100vw;
   background-color: black;
   opacity: 0.8;
@@ -187,6 +187,45 @@ main .filters .filters__desktop-layout .container__div_filter-buttons .grid-item
 }
 main .filters .filters__desktop-layout .container__div_filter-buttons .grid-item7 {
   grid-area: 2/4/3/6;
+}
+
+.listings__section {
+  position: relative;
+  z-index: -2;
+  height: auto;
+  width: 100vw;
+}
+.listings__section .listings-container__div.grid {
+  height: auto;
+  width: auto;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: auto;
+  justify-content: center;
+  text-align: left;
+}
+.listings__section .listings-container__div.grid .card {
+  height: auto;
+  width: auto;
+  background-color: #2e2e2e;
+  box-shadow: 0 0 5px 1px grey;
+  height: auto;
+  width: auto;
+}
+.listings__section .listings-container__div.grid .card figure {
+  height: auto;
+  width: auto;
+}
+.listings__section .listings-container__div.grid .card .specifications {
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+.listings__section .listings-container__div.grid .card .specifications h3 {
+  color: #fff;
+}
+.listings__section .listings-container__div.grid .card .specifications p {
+  color: #fff;
+  margin: 10px 0;
 }
 
 @media screen and (min-width: 701px) {

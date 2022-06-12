@@ -17,50 +17,50 @@
     <main>
         <h1 class="sell__h1">Sell</h1>
 
-        <form action="" class="sell__form">
+        <form action="/sell" class="sell__form" method="post" >
             <div class="form__div_title form__input-container grid-item1">
                 <label for="Title of Listing">Title of Listing:</label>
-                <input type="text">
+                <input type="text" name="titleOfListing" required>
             </div>
 
             <div class="form__div_description form__input-container grid-item2">
                 <label for="Description">Description:</label>
-                <textarea name="description" id="description__vehicle" cols="auto" rows="10"></textarea>
+                <textarea name="description" id="description__vehicle" cols="auto" rows="10" required></textarea>
             </div>
 
             <div class="form__div_year form__input-container grid-item3">
                 <label for="Year">Year:</label>
-                <input type="text">
+                <input type="text" name="year" required>
             </div>
 
             <div class="form__div_make form__input-container grid-item4">
                 <label for="Make">Make:</label>
-                <input type="text">
+                <input type="text" name="make" required>
             </div>
 
             <div class="form__div_model form__input-container grid-item5">
                 <label for="Model">Model:</label>
-                <input type="text">
+                <input type="text" name="model" required>
             </div>
 
             <div class="form__div_mileage form__input-container grid-item6">
                 <label for="Mileage">Mileage:</label>
-                <input type="text">
+                <input type="text" name="mileage" required>
             </div>
 
             <div class="form__div_wheelbase form__input-container grid-item7">
                 <label for="Wheelbase">Wheelbase:</label>
-                <input type="text">
+                <input type="text" name="wheelbase" required>
             </div>
 
             <div class="form__div_price form__input-container grid-item9">
                 <label for="Price">Price:</label>
-                <input type="text">
+                <input type="text" name="price" required>
             </div>
 
-            <div class="form__div_avatar form__input-container">
-                <label for="avatar">Choose Image for your Avatar:</label>
-                <input type="file" id="avatar" name="avatar" accept=".png, .jpg">
+            <div class="form__div_price form__input-container grid-item9">
+                <label for="Image">Image:</label>
+                <input type="file" name="image" id="image" accept="image/*" required>
             </div>
 
             <div class="grid-item8">

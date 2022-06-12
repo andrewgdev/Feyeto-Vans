@@ -28,19 +28,32 @@ livereloadServer.server.once("connection", () => {
 app.use(connectLiveReload())
 
 // MongoDB DATABASE
-
 mongoose.connect("mongodb://localhost:27017/feyetovansDB");
 
+//SCHEMAS
 const userSchema = new mongoose.Schema ({
-    email: String,
     username: String,
-    password: String,
+    email: String,
+    password: String
 })
 
+const createListingSchema = new mongoose.Schema ({
+    titleOfListing: String,
+    description: String,
+    year: String,
+    make: String,
+    model: String,
+    mileage: String,
+    wheelbase: String,
+    price: String,
+    image: Buffer
+})
 
 userSchema.plugin(encrypt, { secret: process.env.SECRET, encryptedFields: ["password"] });
 
-const User = new mongoose.model("User", userSchema);
+//MODELS
+const User = new mongoose.model("Users", userSchema);
+const Listing = new mongoose.model("Listings", createListingSchema);
 
 app.get('/', (req, res) => {
     res.render("index");
@@ -62,32 +75,56 @@ app.get('/buy', (req, res) => {
     res.render("buy");
 });
 
-app.post('/register', (req, res) => {
-    const newUser = new User ({
-        email: req.body.username,
-        password: req.body.password,
-        username: req.body.username
-    })
-    newUser.save(function(err) {
+app.post('/sell', (req, res) => {
+    const newListing = new Listing ({
+        titleOfListing: req.body.titleOfListing,
+        description: req.body.description,
+        year: req.body.year,
+        make: req.body.make,
+        model: req.body.model,
+        mileage: req.body.mileage,
+        wheelbase: req.body.wheelbase,
+        price: req.body.price,
+        image: req.body.image,
+    });
+
+    newListing.save(function(err) {
         if (err) {
             console.log(err);
         } else {
-            res.render("userdashboard");
+            res.redirect("/buy");
         }
     });
 });
 
-app.post('/signin', (req, res) => {
+app.post('/register', (req, res) => {
+    const newUser = new User ({
+        email: req.body.email,
+        username: req.body.username,
+        password: req.body.password
+    })
+
+    newUser.save(function(err) {
+        if (err) {
+            console.log(err);
+        } else {
+            res.redirect("/buy");
+        }
+    });
+});
+
+ 
+app.post('/signin', function(req, res) {
     const username = req.body.username;
     const password = req.body.password;
 
-    User.findOne({username: username}, (err, foundUser) => {
+    User.findOne({username: username}, function(err, foundUser) {
         if (err) {
             console.log(err);
         } else {
             if (foundUser) {
                 if (foundUser.password === password) {
-                    res.render("userdashboard");
+                    res.redirect("/buy");
                 }
             } 
         }

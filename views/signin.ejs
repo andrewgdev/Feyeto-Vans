@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="Join" />
+    <meta property="og:title" content="Signin" />
     <meta property="og:url" content="https://www.feyeto/signin.com" />
-    <!-- <meta property="og:image" content="" /> -->
     <link rel="stylesheet" href="css/signin.css">
     <link rel="stylesheet" href="css/reset.css">
     <title>Sign In</title>
@@ -24,17 +23,16 @@
         <form action="/signin" class="signin__form" method="post">
             <div class="username__div_container form__input-container">
                 <label for="username">Username:</label>
-                <input type="text" required autofocus autocomplete="on" minlength="8" maxlength="16">
+                <input type="text" name="username" required autofocus autocomplete="on" minlength="8" maxlength="16">
             </div>            
             
             <div class="password__div_container form__input-container">
                 <label for="password">Password:</label>
-                <input type="password" required minlength="8" maxlength="16">
+                <input type="password" name="password" required minlength="8" maxlength="16">
             </div>
 
             <button type="submit" class="form__button_submit">Submit</button>
         </form>
     </main>
 </body>
-<script src="js/signin.js"></script>
 </html>

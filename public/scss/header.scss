@@ -35,6 +35,7 @@ header {
         
                 .nav__ul {
                     display: flex;
+                    align-items: center;
         
                     .nav__li {
                         margin: 0 5px;
@@ -46,6 +47,10 @@ header {
                         a:hover {
                             color: $purpleFontColor;
                         }
+                    }
+
+                    .nav__li img {
+                        border-radius: 5px;
                     }
                 }
             }
