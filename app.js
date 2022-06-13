@@ -14,19 +14,6 @@ const port = process.env.PORT || 3000;
 
 app.use(express.static("public"));
 
-var connectLiveReload = require("connect-livereload");
-var livereload = require('livereload');
-var livereloadServer = livereload.createServer({extraExts: ['ejs']});
-livereloadServer.watch([__dirname + "/public",__dirname + "/views"]);
-
-livereloadServer.server.once("connection", () => {
-    setTimeout(() => {
-        livereloadServer.refresh("/");
-    }, 100);
-  });
-
-app.use(connectLiveReload())
-
 // MongoDB DATABASE
 mongoose.connect("mongodb+srv://andg_97:Veronica_1019@feyetovans.bftci.mongodb.net/feyetovansDB");
 
